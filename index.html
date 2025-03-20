@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vue.js from CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="logo">
+                <!-- Placeholder logo - replace with your actual logo -->
+                <h1>{{ companyName }}</h1>
+                <img v-if="logoUrl" :src="logoUrl" alt="Company Logo">
+            </div>
+            <div class="social-icons">
+                <a v-for="icon in socialIcons" :key="icon.name" :href="icon.url" target="_blank" class="icon">
+                    <i :class="icon.class"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
